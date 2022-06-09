@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sorting Hat Quiz</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div class="title-image">
+            <span id="question-count1">1 / 9</span>
+            <img src="images/Title-image-1.jpg" alt="Sorting Hat Quiz">
+            <span id="question-count2">1 / 9</span>
+        </div>
+        <div class="question1">
+            <h2>Moon or Stars?</h2>
+            <div class="buttons">
+                <button type="button" id="answer-1A" onclick="answer1A(), playAudio()">Moon</button>
+                <button type="button" id="answer-1B" onclick="answer1B(), playAudio()">Stars</button>
+            </div>
+        </div>
+        <div class="question2">
+            <h2 id="question-2"></h2>
+            <div class="buttons">
+                <button type="button" id="answer-2A" onclick="answer2A(), playAudio()"></button>
+                <button type="button" id="answer-2B" onclick="answer2B(), playAudio()"></button>
+            </div>
+        </div>
+        <div class="question3">
+            <h2>Four boxes are placed before you. <br>Which would you try and open?</h2>
+            <div class="buttons-row">
+                <button type="button" id="answer-3A" onclick="answer3A(), playAudio()">The small tortoiseshell box, embellished with gold, inside which some small creature seems to be squeaking.</button>
+                <button type="button" id="answer-3B" onclick="answer3B(), playAudio()">The gleaming jet black box<br> with a silver lock and key, marked with a mysterious rune that you know to be the mark of Merlin.</button>
+            </div>
+            <div class="buttons-row">
+                <button type="button" id="answer-3C" onclick="answer3C(), playAudio()">The ornate golden casket, standing on clawed feet, whose inscription warns that both secret knowledge and unbearable temptation lie within.</button>
+                <button type="button" id="answer-3D" onclick="answer3D(), playAudio()">The small pewter box, unassuming and plain, with a scratched message upon it that reads ‘I open only for the worthy.’</button>
+            </div>
+        </div>
+        <div class="question4">
+            <h2>Four goblets are placed before you. <br>Which would you choose to drink?</h2>
+            <div class="buttons-row">
+                <button type="button" id="answer-4A" onclick="answer4A(), playAudio()">The foaming, frothing, silvery liquid that sparkles as though containing ground diamonds.</button>
+                <button type="button" id="answer-4B" onclick="answer4B(), playAudio()">The smooth, thick, richly purple drink that gives off a delicious smell of chocolate and plums.</button>
+            </div>
+            <div class="buttons-row">
+                <button type="button" id="answer-4C" onclick="answer4C(), playAudio()">The golden liquid so bright that it hurts the eye, and which makes sunspots dance all around the room.</button>
+                <button type="button" id="answer-4D" onclick="answer4D(), playAudio()">The mysterious black liquid that gleams like ink, and gives off fumes that make you see strange visions.</button>
+            </div>
+        </div>
+        <div class="question5">
+            <h2>You and two friends need to cross a bridge guarded by a river troll who insists on fighting one of you before he will let all of you pass. Do you:</h2>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-5A" onclick="answer5A(), playAudio()">Attempt to confuse the troll into letting all three of you pass without fighting?</button>
+                <button type="button" id="answer-5B" onclick="answer5B(), playAudio()">Suggest drawing lots to decide which of you will fight?</button>
+            </div>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-5C" onclick="answer5C(), playAudio()">Suggest that all three of you should fight (without telling the troll)?</button>
+                <button type="button" id="answer-5D" onclick="answer5D(), playAudio()">Volunteer to fight?</button>
+            </div>
+        </div>
+        <div class="question6">
+            <h2>You enter an enchanted garden. What would you be most curious to examine first?</h2>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-6A" onclick="answer6A(), playAudio()">The silver leafed tree bearing golden apples</button>
+                <button type="button" id="answer-6B" onclick="answer6B(), playAudio()">The fat red toadstools that appear to be talking to each other</button>
+            </div>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-6C" onclick="answer6C(), playAudio()">The bubbling pool, in the depths of which something luminous is swirling</button>
+                <button type="button" id="answer-6D" onclick="answer6D(), playAudio()">The statue of an old wizard with a strangely twinkling eye</button>
+            </div>
+        </div>
+        <div class="question7">
+            <h2>After you have died, what would you most like people to do when they hear your name?</h2>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-7A" onclick="answer7A(), playAudio()">Miss you, but smile</button>
+                <button type="button" id="answer-7B" onclick="answer7B(), playAudio()">Ask for more stories about your adventures</button>
+            </div>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-7C" onclick="answer7C(), playAudio()">Think with admiration of your achievements</button>
+                <button type="button" id="answer-7D" onclick="answer7D(), playAudio()">I don't care what people think of me after I'm dead; it's what they think of me while I'm alive that counts</button>
+            </div>
+        </div>
+        <div class="question8">
+            <h2>A Muggle confronts you and says that they are sure you are a witch or wizard. Do you:</h2>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-8A" onclick="answer8A(), playAudio()">Ask what makes them think so?</button>
+                <button type="button" id="answer-8B" onclick="answer8B(), playAudio()">Agree, and ask whether they’d like a free sample of a jinx?</button>
+            </div>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-8C" onclick="answer8C(), playAudio()">Agree, and walk away, leaving them to wonder whether you are bluffing?</button>
+                <button type="button" id="answer-8D" onclick="answer8D(), playAudio()">Tell them that you are worried about their mental health, and offer to call a doctor.</button>
+            </div>
+        </div>
+        <div class="question9">
+            <h2>Which road tempts you the most?</h2>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-9A" onclick="answer9A(), playAudio()">The wide, sunny, grassy lane</button>
+                <button type="button" id="answer-9B" onclick="answer9B(), playAudio()">The narrow, dark, lantern-lit alley</button>
+            </div>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-9C" onclick="answer9C(), playAudio()">The twisting, leaf-strewn path through woods</button>
+                <button type="button" id="answer-9D" onclick="answer9D(), playAudio()">The cobbled street lined with ancient buildings</button>
+            </div>
+        </div>
+        <div class="question10">
+            <h2>Which of the following would you most hate people to call you?</h2>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-10A" onclick="answer10A(), playAudio()">Ordinary</button>
+                <button type="button" id="answer-10B" onclick="answer10B(), playAudio()">Ignorant</button>
+            </div>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-10C" onclick="answer10C(), playAudio()">Cowardly</button>
+                <button type="button" id="answer-10D" onclick="answer10D(), playAudio()">Selfish</button>
+            </div>
+        </div>
+        <div class="question11">
+            <h2>Given the choice, would you rather invent a potion that would guarantee you:</h2>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-11A" onclick="answer11A(), playAudio()">Love?</button>
+                <button type="button" id="answer-11B" onclick="answer11B(), playAudio()">Glory?</button>
+            </div>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-11C" onclick="answer11C(), playAudio()">Wisdom?</button>
+                <button type="button" id="answer-11D" onclick="answer11D(), playAudio()">Power?</button>
+            </div>
+        </div>
+
+        <div class="question12">
+            <h2>Did you put your name into the Goblet of Fire?! <br>Did you ask one of the older students to do it for you?</h2>
+            <div class="buttons-row-small">
+                <button type="button" id="answer-12A" onclick="answer12A(), playAudio()">No, Sir!</button>
+                <button type="button" id="answer-12B" onclick="answer12B(), playAudio()">So what if I did 'Big Al'?</button>
+            </div>
+        </div>
+
+
+
+        <!-- ENDGAME MODAL -->
+        <div id="myModal" class="modal">
+            <div class="modal-content" id="modalScreen">
+                <span class="close">&times;</span>
+                <div class="traits">
+                    <p id="threeTraits"></p>
+                </div>
+                <div class="finalResultImg">
+                    <img id="finalResultImg" src="images/Sorting-Hat-icon.png">
+                </div>
+                <div class="finalResult">
+                    <h2 id="finalResult"></h2>
+                </div>
+                <div class="houseCrest">
+                    <img id="houseCrest">
+                </div>
+                <div class="welcomeMessage">
+                    <p id="welcomeMessage"></p>
+                </div>
+                <div class="houseDescription">
+                    <p id="houseDescription"></p>
+                </div>
+                <div class="scoreDisplay">
+                    <div>
+                        <h2 id="gryffindor"></h2>
+                    </div>
+                    <div>
+                        <h2 id="ravenclaw"></h2>
+                    </div>
+                    <div>
+                        <h2 id="hufflepuff"></h2>
+                    </div>
+                    <div>
+                        <h2 id="slytherin"></h2>
+                    </div>
+                </div>
+                <div class="quoteContent">
+                    <p id="quoteContent"></p>
+                </div>
+                <div class="quotePerson">
+                    <p id="quotePerson"></p>
+                </div>
+                <div class="quoteSource">
+                    <p id="quoteSource"></p>
+                </div>
+                <div class="playAgain">
+                    <button id="playAgain">Retake Sorting Hat Ceremony?</button>
+                </div>
+            </div>
+        </div>
+        <footer class="mainFooter">
+            <p><a href="https://github.com/nloc1929" target="#">Nicholas Locke</a></p>
+            <p><span id="date_year"></span></p>
+            <p>Please see <a href="credits.html">CREDITS</a> <br>for the sources to all Images, Sounds and Data used</p>
+            </div>
+            <!-- JAVASCRIPT FUNCTION TO DISPLAY CURRENT YEAR -->
+            <script>
+                const getYear = new Date();
+                document.getElementById('date_year').textContent = getYear.getFullYear();
+            </script>
+        </footer>
+
+
+
+        <!-- AUDIO FILES -->
+        <audio id="gryffindorAudio"><source src="audio/Gryffindor(edited).mp3"></audio>
+        <audio id="ravenclawAudio"><source src="audio/Ravenclaw(edited).mp3"></audio>
+        <audio id="hufflepuffAudio"><source src="audio/Hufflepuff(edited).mp3"></audio>
+        <audio id="slytherinAudio"><source src="audio/Slytherin(edited).mp3"></audio>
+        <audio id="buttonAudio"><source src="audio/another-wand-spell.mp3"></audio>
+        <audio id="restartAudio"><source src="audio/Royal-sparkle-woosh-centre.mp3"></audio>
+
+    </body>
+</html>
